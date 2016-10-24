@@ -1,0 +1,138 @@
+$fsize_h1: 14px;
+$fsize_h2: 12px;
+$fsize_time: 10px;
+$fsize_band: 12px;
+$fsize_next: 11px;
+$fsize_nav: 13px;
+$fsize_base: 12px;
+
+* {
+  margin: 0;
+  padding: 0;
+  color: #333333;
+}
+
+body {
+  font-size: $fsize_base;
+  line-height: 1;
+  text-align: center;
+}
+
+header {
+    background-color: #0099ff;
+    padding: 10px 0;
+
+    h1 {
+      font-size: $fsize_h1;
+      color: lighten(#0099ff, 45%);
+      text-shadow: darken(#0099ff, 30%) 0 -1px 0;
+    }
+}
+
+nav {
+  display: block;
+  overflow: hidden;
+  ul {
+    display: block;
+    li {
+      font-size: $fsize_nav;
+      font-weight: bold;
+      background-color: #99ddff;
+      width: 50%;
+      display: block;
+      float: left;
+      list-style: none;
+
+      &.cur {
+        padding: 8px 0;
+        background-color: #ffffff;
+      }
+
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 8px 0;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+#search {
+  width: 100%;
+  height: 30px;
+  text-align: left;
+
+  #search_text {
+    width: 80%;
+    height: 30px;
+    border: none;
+    background-color: lighten(#ffcc80, 10%);
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    text-indent: 5px;
+  }
+
+  #search_reset {
+    width: 20%;
+    height: 30px;
+    background-color: #ffcc80;
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+h2 {
+  background-color: #ffcc80;
+  padding: 5px 0;
+  font-size: $fsize_h2;
+}
+
+.time {
+  font-size: $fsize_time;
+  color: #666666;
+  padding: 3px 0;
+}
+
+.band {
+  font-size: $fsize_band;
+  font-size: 14px;
+  padding: 5px 0;
+  font-weight: bold;
+}
+
+.next {
+  font-size: $fsize_next;
+  padding: 5px;
+  background-color: #eeeeee;
+}
+
+#timetable {
+  div.info {
+    padding: 5px 5px;
+
+    .bandname {
+      font-weight: bold;
+      text-align: left;
+      margin-bottom: 3px;
+
+      .circle {
+        font-weight: normal;
+        font-size: 11px;
+      }
+    }
+
+    .date {
+      text-align: right;
+      font-size: $fsize_next;
+      color: #336699;
+    }
+
+    &:nth-child(even) {
+      background-color: #eeeeee;
+    }
+  }
+}
