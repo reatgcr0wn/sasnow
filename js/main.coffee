@@ -2,7 +2,7 @@ $ ->
   $.getJSON "./sas.json", (data)->
     now = new Date()
 
-    for place in ["sorami","B3","3F9","4F5","hiroba","sky","f350"]
+    for place in ["hiroba","sorami","sky","B3","2F10","3F12","s634","f350"]
       len = data["timetable"][place].length
 
       div_p = $("##{place}")

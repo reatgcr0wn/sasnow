@@ -1,17 +1,18 @@
 $ ->
   places =
-    "sorami":"ソラミ坂ひろば"
-    "B3":"地下3階エントランススペース"
-    "3F9":"3階9番地エスカレーター横"
-    "4F5":"4階5番地ツリービレッジエントランス横"
     "hiroba":"ソラマチひろば"
+    "sorami":"ソラミ坂ひろば"
     "sky":"スカイアリーナ"
-    "f350":"タワー天望デッキフロア350"
+    "B3":"地下3階エントランススペース"
+    "2F10":"2階10番地特設会場"
+    "3F12":"3階12番地特設会場"
+    "s634":"スペース634＆ホワイエ"
+    "f350":"東京スカイツリー天望デッキフロア350"
 
   $.getJSON "./sas.json", (data)->
     bands = []
 
-    for place in ["sorami","B3","3F9","4F5","hiroba","sky","f350"]
+    for place in ["hiroba","sorami","sky","B3","2F10","3F12","s634","f350"]
       for band, i in data["timetable"][place]
         band["place"] = place
       bands = bands.concat data["timetable"][place]
