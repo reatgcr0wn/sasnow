@@ -24,7 +24,6 @@ id = 1
 
 CSV.foreach("./20161203.csv") do |row|
   s, e = row[1].split('〜')
-
   obj = {
     "id" => id,
     "start_time" => (Time.new(2016, 12, 3, s.split(":")[0], s.split(":")[1])).to_s.gsub('-','/'),
