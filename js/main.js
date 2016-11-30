@@ -4,7 +4,7 @@ $(function() {
   return $.getJSON("./sas.json", function(data) {
     var band, band_text, div, div_p, e, flag, i, j, k, l, len, len1, len2, len3, n, next, next_band, next_date, now, place, ref, ref1, ref2, results, s, time_text;
     now = new Date();
-    ref = ["sorami", "B3", "3F9", "4F5", "hiroba", "sky", "f350"];
+    ref = ["hiroba", "sorami", "sky", "B3", "2F10", "3F12", "s634", "f350"];
     results = [];
     for (j = 0, len1 = ref.length; j < len1; j++) {
       place = ref[j];
